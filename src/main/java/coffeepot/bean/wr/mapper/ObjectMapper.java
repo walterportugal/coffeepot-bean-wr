@@ -312,7 +312,7 @@ public class ObjectMapper {
                 }
 
                 if (Class.class.equals(mappedField.getClassType())) {
-                    throw new NoSuchFieldException("Class not defined for method mode");
+                    throw new NoSuchFieldException(String.format("Class not defined for method mode - Field Name:", mappedField.getName()));
                 }
 
                 if (!"".equals(f.getGetter())) {
